@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ViewEquipmentActivity">
+
+    <ListView
+        android:id="@+id/equipment_listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/gym_equipment_layout_item"
+        />
+
+    <ImageView
+        android:id="@+id/total_cost_icon_imageView"
+        android:layout_width="0dp"
+        android:layout_height="112dp"
+        android:src="@drawable/ic_money_bag"
+        app:layout_constraintBottom_toTopOf="@id/list_done_imageButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/equipment_listView"
+        app:layout_constraintWidth_percent=".4" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/total_cost_icon_imageView"
+        app:layout_constraintTop_toTopOf="@id/total_cost_icon_imageView"
+        app:layout_constraintBottom_toBottomOf="@id/total_cost_icon_imageView"
+        tools:text="$199.91"
+        android:textAlignment="center"
+        />
+
+    <ImageButton
+        android:id="@+id/list_done_imageButton"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent=".7"
+        android:src="@drawable/ic_check"
+        android:scaleType="fitCenter"
+        android:padding="12dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
