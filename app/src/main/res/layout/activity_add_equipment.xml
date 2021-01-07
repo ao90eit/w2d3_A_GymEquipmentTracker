@@ -23,7 +23,8 @@
         app:layout_constraintBottom_toBottomOf="@id/equipment_type_imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/guide_vert_35"
-        tools:text="Sweet dumbbells" />
+        tools:text="Sweet dumbbells"
+        android:imeOptions="actionNext" />
 
     <ImageView
         android:id="@+id/body_part_imageView"
@@ -42,7 +43,8 @@
         app:layout_constraintBottom_toBottomOf="@id/body_part_imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/guide_vert_35"
-        tools:text="Arms" />
+        tools:text="Arms"
+        android:imeOptions="actionNext" />
 
     <ImageView
         android:id="@+id/equipment_price_imageView"
@@ -61,10 +63,11 @@
         app:layout_constraintBottom_toBottomOf="@id/equipment_price_imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/guide_vert_35"
-        tools:text="$40" />
+        tools:text="$40"
+        android:imeOptions="actionDone" />
 
     <ImageButton
-        android:id="@+id/add_equipment_imageButton"
+        android:id="@+id/add_equipment_to_db_imageButton"
         android:layout_width="0dp"
         android:layout_height="64dp"
         android:padding="12dp"

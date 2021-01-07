@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">w2d3_A_GymEquipmentTracker</string>
     <string name="app_title">Gym Equipment Tracker</string>
+    <string name="database_create_table">CREATE TABLE %s (
+        %s INTEGER PRIMARY KEY AUTOINCREMENT, %s %s, %s %s, %s %s) </string>
+    <string name="database_drop_table">DROP TABLE IF EXISTS %s </string>
+    <string name="database_delete_item">DELETE FROM %s WHERE %s = %d</string>
+    <string name="database_select_all">SELECT * FROM %s</string>
+    <string name="item_added_toast">Item Added</string>
 </resources>
