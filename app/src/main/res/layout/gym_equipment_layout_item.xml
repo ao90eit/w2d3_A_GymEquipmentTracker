@@ -21,7 +21,7 @@
             app:layout_constraintWidth_percent=".3" />
         
         <TextView
-            android:id="@+id/equipment_list_price_imageView"
+            android:id="@+id/equipment_list_price_textView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toEndOf="@id/equipment_list_icon_imageView"

@@ -25,11 +25,11 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.add_equipment_imageButton)
     public void onAddEquipment (View view) {
-        startActivity(new Intent(MainActivity.this, AddEquipmentActivity.class));
+        startActivity(new Intent(this, AddEquipmentActivity.class));
     }
 
     @OnClick(R.id.view_equipment_imageButton)
     public void onViewEquipment (View view) {
-        startActivity(new Intent(MainActivity.this, ViewEquipmentActivity.class));
+        startActivity(new Intent(this, ViewEquipmentActivity.class));
     }
 }
