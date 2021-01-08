@@ -54,7 +54,7 @@ public class ViewEquipmentActivity extends AppCompatActivity implements GymEquip
             totalCost += ge.getPrice();
         }
 
-        totalCostTextView.setText(String.format("%.2f", totalCost));
+        totalCostTextView.setText(getResources().getString(R.string.total_cost, totalCost));
     }
 
     @OnClick(R.id.list_done_imageButton)

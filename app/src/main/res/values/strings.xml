@@ -7,4 +7,8 @@
     <string name="database_delete_item">DELETE FROM %s WHERE %s = %d</string>
     <string name="database_select_all">SELECT * FROM %s</string>
     <string name="item_added_toast">Item Added</string>
+    <string name="detail_item_id">Item #%d</string>
+    <string name="detail_item_body_part">Good For %s</string>
+    <string name="detail_item_price">Price $%.2f</string>
+    <string name="total_cost">$%.2f</string>
 </resources>

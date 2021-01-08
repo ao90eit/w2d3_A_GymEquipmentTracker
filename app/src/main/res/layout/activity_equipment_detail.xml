@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.EquipmentDetailActivity">
+    tools:context=".view.EquipmentDetailActivity"
+    android:layout_margin="0dp"
+    android:background="@drawable/bricks_red">
 
     <ImageView
         android:id="@+id/detail_icon_imageView"
-        android:layout_width="0dp"
-        android:layout_height="128dp"
+        style="@style/StackedImages"
         android:src="@drawable/ic_dumbbell"
         app:layout_constraintBottom_toTopOf="@+id/guide_horiz_40"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,8 +18,7 @@
 
     <TextView
         android:id="@+id/detail_id_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/GeneralTextView"
         tools:text="# 1"
         app:layout_constraintTop_toBottomOf="@id/detail_icon_imageView"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,8 +26,7 @@
 
     <TextView
         android:id="@+id/detail_name_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/GeneralTextView"
         tools:text="Item -> Dumbbells"
         app:layout_constraintTop_toBottomOf="@id/detail_id_textView"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,8 +34,7 @@
 
     <TextView
         android:id="@+id/detail_body_part_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/GeneralTextView"
         tools:text="Works out -> Arms"
         app:layout_constraintTop_toBottomOf="@id/detail_name_textView"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,8 +42,7 @@
 
     <TextView
         android:id="@+id/detail_price_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/GeneralTextView"
         tools:text="Price -> $30.00"
         app:layout_constraintTop_toBottomOf="@id/detail_body_part_textView"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,16 +50,11 @@
 
     <ImageButton
         android:id="@+id/detail_done_imageButton"
-        android:layout_width="0dp"
-        android:layout_height="64dp"
+        style="@style/GeneralButtonStyle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_percent=".7"
-        android:src="@drawable/ic_check"
-        android:scaleType="fitCenter"
-        android:padding="12dp"
-        />
+        android:src="@drawable/ic_check" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide_horiz_40"

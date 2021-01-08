@@ -3,6 +3,7 @@ package com.aoinc.w2d3_a_gymequipmenttracker.view;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -28,20 +29,23 @@ public class EquipmentDetailActivity extends AppCompatActivity {
     @BindView(R.id.detail_price_textView)
     public TextView price;
 
+    private Resources resources;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_equipment_detail);
 
         ButterKnife.bind(this);
+        resources = getResources();
 
         GymEquipment item = getIntent()
                 .getParcelableExtra(ViewEquipmentActivity.TAG_DETAIL_ITEM);
 
-        id.setText(String.valueOf(item.getEquipmentID()));
+        id.setText(resources.getString(R.string.detail_item_id, item.getEquipmentID()));
         name.setText(item.getItemName());
-        bodyPart.setText(item.getBodyPart());
-        price.setText(String.format("%.2f", item.getPrice()));
+        bodyPart.setText(resources.getString( R.string.detail_item_body_part, item.getBodyPart()));
+        price.setText(resources.getString(R.string.detail_item_price, item.getPrice()));
     }
 
     @OnClick(R.id.detail_done_imageButton)

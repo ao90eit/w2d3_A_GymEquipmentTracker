@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.AddEquipmentActivity">
+    tools:context=".view.AddEquipmentActivity"
+    android:background="@drawable/bricks_bluish"
+    android:layout_margin="0dp" >
 
     <ImageView
         android:id="@+id/equipment_type_imageView"
-        android:layout_width="0dp"
-        android:layout_height="112dp"
+        style="@style/StackedImages"
         android:src="@drawable/ic_sports_equipment"
         app:layout_constraintEnd_toEndOf="@id/guide_vert_35"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,9 +18,7 @@
 
     <EditText
         android:id="@+id/equipment_type_editText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:singleLine="true"
+        style="@style/GeneralEditText"
         app:layout_constraintBottom_toBottomOf="@id/equipment_type_imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/guide_vert_35"
@@ -28,8 +27,7 @@
 
     <ImageView
         android:id="@+id/body_part_imageView"
-        android:layout_width="0dp"
-        android:layout_height="112dp"
+        style="@style/StackedImages"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="@id/guide_vert_35"
         app:layout_constraintTop_toBottomOf="@id/equipment_type_imageView"
@@ -37,9 +35,7 @@
 
     <EditText
         android:id="@+id/body_part_editText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:singleLine="true"
+        style="@style/GeneralEditText"
         app:layout_constraintBottom_toBottomOf="@id/body_part_imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/guide_vert_35"
@@ -48,8 +44,7 @@
 
     <ImageView
         android:id="@+id/equipment_price_imageView"
-        android:layout_width="0dp"
-        android:layout_height="112dp"
+        style="@style/StackedImages"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="@id/guide_vert_35"
         app:layout_constraintTop_toBottomOf="@id/body_part_imageView"
@@ -57,9 +52,7 @@
 
     <EditText
         android:id="@+id/equipment_price_editText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:singleLine="true"
+        style="@style/GeneralEditText"
         app:layout_constraintBottom_toBottomOf="@id/equipment_price_imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/guide_vert_35"
@@ -68,16 +61,12 @@
 
     <ImageButton
         android:id="@+id/add_equipment_to_db_imageButton"
-        android:layout_width="0dp"
-        android:layout_height="64dp"
-        android:padding="12dp"
-        android:scaleType="fitCenter"
+        style="@style/GeneralButtonStyle"
         android:src="@drawable/ic_add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/equipment_price_imageView"
-        app:layout_constraintWidth_percent=".7" />
+        app:layout_constraintTop_toBottomOf="@+id/equipment_price_imageView" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide_vert_35"

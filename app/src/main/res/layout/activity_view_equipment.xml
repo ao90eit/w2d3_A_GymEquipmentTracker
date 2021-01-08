@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.ViewEquipmentActivity">
+    tools:context=".view.ViewEquipmentActivity"
+    android:layout_margin="0dp"
+    android:background="@drawable/bricks_red">
 
     <ListView
         android:id="@+id/equipment_listView"
@@ -18,8 +20,9 @@
 
     <ImageView
         android:id="@+id/total_cost_icon_imageView"
+        style="@style/StackedImages"
         android:layout_width="0dp"
-        android:layout_height="112dp"
+        android:layout_height="@dimen/stacked_image_height"
         android:src="@drawable/ic_money_bag"
         app:layout_constraintBottom_toTopOf="@id/list_done_imageButton"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,8 +31,8 @@
 
     <TextView
         android:id="@+id/total_cost_textView"
+        style="@style/GeneralTextView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/total_cost_icon_imageView"
         app:layout_constraintTop_toTopOf="@id/total_cost_icon_imageView"
@@ -40,15 +43,10 @@
 
     <ImageButton
         android:id="@+id/list_done_imageButton"
-        android:layout_width="0dp"
-        android:layout_height="64dp"
+        style="@style/GeneralButtonStyle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_percent=".7"
-        android:src="@drawable/ic_check"
-        android:scaleType="fitCenter"
-        android:padding="12dp"
-        />
+        android:src="@drawable/ic_check" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
