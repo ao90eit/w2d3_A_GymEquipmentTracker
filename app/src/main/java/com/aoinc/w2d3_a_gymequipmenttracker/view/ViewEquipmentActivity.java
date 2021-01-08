@@ -62,10 +62,12 @@ public class ViewEquipmentActivity extends AppCompatActivity implements GymEquip
         finish();
     }
 
+    public static final String TAG_DETAIL_ITEM = "detail item";
+
     @Override
     public void SelectGymEquipment(GymEquipment selectedEquipment) {
-        Toast.makeText(ViewEquipmentActivity.this,
-                String.valueOf(selectedEquipment.getPrice()),
-                Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, EquipmentDetailActivity.class);
+        intent.putExtra(TAG_DETAIL_ITEM, selectedEquipment);
+        startActivity(intent);
     }
 }

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.W2d3_A_GymEquipmentTracker">
-        <activity android:name=".view.ViewEquipmentActivity"></activity>
+        <activity android:name=".view.EquipmentDetailActivity"></activity>
+        <activity android:name=".view.ViewEquipmentActivity" />
         <activity android:name=".view.AddEquipmentActivity" />
         <activity android:name=".view.MainActivity">
             <intent-filter>

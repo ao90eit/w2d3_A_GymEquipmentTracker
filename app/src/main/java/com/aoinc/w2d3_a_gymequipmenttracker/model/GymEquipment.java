@@ -1,6 +1,9 @@
 package com.aoinc.w2d3_a_gymequipmenttracker.model;
 
-public class GymEquipment {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class GymEquipment implements Parcelable {
     private int equipmentID;
     private String itemName;
     private String bodyPart;
@@ -18,6 +21,25 @@ public class GymEquipment {
         this.bodyPart = bodyPart;
         this.price = price;
     }
+
+    protected GymEquipment(Parcel in) {
+        equipmentID = in.readInt();
+        itemName = in.readString();
+        bodyPart = in.readString();
+        price = in.readDouble();
+    }
+
+    public static final Creator<GymEquipment> CREATOR = new Creator<GymEquipment>() {
+        @Override
+        public GymEquipment createFromParcel(Parcel in) {
+            return new GymEquipment(in);
+        }
+
+        @Override
+        public GymEquipment[] newArray(int size) {
+            return new GymEquipment[size];
+        }
+    };
 
     public int getEquipmentID() {
         return equipmentID;
@@ -49,5 +71,18 @@ public class GymEquipment {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(equipmentID);
+        dest.writeString(itemName);
+        dest.writeString(bodyPart);
+        dest.writeDouble(price);
     }
 }

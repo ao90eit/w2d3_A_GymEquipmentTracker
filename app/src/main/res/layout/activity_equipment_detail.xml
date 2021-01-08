@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.EquipmentDetailActivity">
+
+    <ImageView
+        android:id="@+id/detail_icon_imageView"
+        android:layout_width="0dp"
+        android:layout_height="128dp"
+        android:src="@drawable/ic_dumbbell"
+        app:layout_constraintBottom_toTopOf="@+id/guide_horiz_40"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/detail_id_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="# 1"
+        app:layout_constraintTop_toBottomOf="@id/detail_icon_imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/detail_name_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Item -> Dumbbells"
+        app:layout_constraintTop_toBottomOf="@id/detail_id_textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/detail_body_part_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Works out -> Arms"
+        app:layout_constraintTop_toBottomOf="@id/detail_name_textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/detail_price_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Price -> $30.00"
+        app:layout_constraintTop_toBottomOf="@id/detail_body_part_textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/detail_done_imageButton"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent=".7"
+        android:src="@drawable/ic_check"
+        android:scaleType="fitCenter"
+        android:padding="12dp"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_horiz_40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".4" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
